@@ -11,7 +11,7 @@
 
         /* Section 1 */   
 
-        var name = "Joe";  // je déclare la variable name qui prend pour valeur Joe
+        var name = "Lucas";  // je déclare la variable name qui prend pour valeur Joe
         var city = 'London';  // je déclare la variable city qui prend pour valeur London
         var age = 32;  // je déclare la variable age qui prend pour valeur 32
         var isRed = true;  // je déclare la variable booléan isRed qui prend pour valeur true
@@ -37,34 +37,48 @@
             }
         }
 
+        // info affiche dans la console les valeurs entre parenthèses
         info(165, 45);
 
+        // je déclare la variable myHeight qui prend la valeur 175
         var myHeight = 175;
+        // je déclare la variable myWeight qui prend la valeur 86
         var myWeight = 86;
 
         info(myHeight, myWeight);
 
+        // affiche ans la console mes valeurs de variale + ou moins le nombre qui leur est assigné
         info(myHeight + 15, myWeight - 100);
 
+        // Fonction toUpper return la variable passé en paramètre en majuscule grâce à la fonction native toUpperCase()
         function toUpper(variable) {
             return variable.toUpperCase();
         }
 
+        // déclare la varibale upperName qui prend la valeur de name passé en majuscule
         var upperName = toUpper(name);
 
+        // une boucle for qui va de 0 à 2 et don cqui afiche les trois jobs
         for (i = 0; i < 3; i = i + 1) {
             console.log(previousJobs[i]);
         }
 
         /* Section 2: */
 
-        // afficher la ville dans laquele Joe vit.     
+        // afficher la ville dans laquele Joe vit.
+        console.info(city);
 
         // afficher si Joe est roux ou pas.
-
+            if(isRed === true){
+                console.log("Lucas est roux");
+            }
         /* Section 3 */
 
-        // console.log(myVariable);
+        // Il y a une erreur dans la console car myVariable n'est pas défini, donc il faut la définir
+        let myVariable = "Lucas est roux, grand, >15kg car il mange beaucoup de pâtes"
+
+        console.log(myVariable);
+
 
         </script>
 

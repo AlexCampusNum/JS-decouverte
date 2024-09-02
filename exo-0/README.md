@@ -2,7 +2,7 @@
 
 Avant d'écrire du code JavaScript, il est important de savoir le lire, c'est le but de cette partie.
 
-### Section 1 : Commentaires
+### Section 1[README.md](..%2Fexo-1%2FREADME.md) : Commentaires
 
 L'objectif est de commenter **chaque ligne de code** du fichier `index.html` avec une phrase en français qui explique ce qu'elle fait.
 
