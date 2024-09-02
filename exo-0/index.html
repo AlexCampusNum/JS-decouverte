@@ -11,22 +11,27 @@
 
         /* Section 1 */   
 
-        var name = "Joe";
-        var city = 'London';
-        var age = 32;
-        var isRed = true;
-        var isOld = age > 80;
+        var name = "Joe";  // je déclare la variable name qui prend pour valeur Joe
+        var city = 'London';  // je déclare la variable city qui prend pour valeur London
+        var age = 32;  // je déclare la variable age qui prend pour valeur 32
+        var isRed = true;  // je déclare la variable booléan isRed qui prend pour valeur true
+        var isOld = age > 80;  // je déclare la variable isOld qui prend pour valeur age > 80
 
-        var previousJobs = ['lawyer', 'developper', 'Professionnal climber'];
+        var previousJobs = ['lawyer', 'developper', 'Professionnal climber'];  // je déclare la variable (tableau) previousJobs qui prend pour valeurs lawyer, developper, Professional climber
 
+        // Fonction info qu iprend en paramètre height et weight et qui affiche tu texte dans la console
         function info(height, weight) {
+            // If si vous êtes plus grand que 180cm la console affiche Vous êtes grand
             if (height > 180) {
                 console.log('Vous êtes grand');
             }
+            // If si vous êtes plus léger que 0kg, la console affiche oups, there is a problem
             if (weight < 0) {
                 console.log('oups, there is a problem');
+            // Else if si vous êtes plus léger que 15kg, la console affiche Are you that slim ?
             } else if ( weight < 15) {
                 console.log('Are you that slim ?')
+            // If vous n'etes pas tout ça alors ça affiche Good ! dans la console
             } else {
                 console.log('Good !')
             }
