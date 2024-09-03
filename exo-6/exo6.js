@@ -56,6 +56,10 @@ team.addGames("PC", 99, 2);
 
 console.log(team);
 
+// let totalTeamPoints = 0;
+// for (let i = 0; i < team.games.length; i++) {
+//     totalTeamPoints += team.games[i].teamPoints;
+// }
 
 let totalTeamPoints = team.games.reduce((total, game) => {
     return total + game.teamPoints;
@@ -64,6 +68,11 @@ console.log("Points total de la team : " + totalTeamPoints);
 
 console.log("Nombre de games : " + team.games.length);
 
+// let totalOpponentPoints = 0;
+// for (let i = 0; i < team.games.length; i++) {
+//     totalOpponentPoints += team.games[i].opponentPoints;
+// }
+
 let totalOpponentPoints = team.games.reduce((total, game) => {
     return total + game.opponentPoints;
 }, 0);
@@ -71,6 +80,13 @@ console.log("Total des points des adversaires : " + totalOpponentPoints);
 
 let moyTeamPoints = totalOpponentPoints / team.games.length;
 console.log("Moyenne des points des adversaires : " + moyTeamPoints);
+
+// let olderPlayer = team.players[0];
+// for (let i = 1; i < team.players.length; i++) {
+//     if (team.players[i].age > olderPlayer.age) {
+//         olderPlayer = team.players[i];
+//     }
+// }
 
 let olderPlayer = team.players.reduce((older, player) => {
     return (player.age > older.age) ? player : older;
