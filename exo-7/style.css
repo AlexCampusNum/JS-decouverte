@@ -1,4 +1,8 @@
-.one, .two, .three{
-    margin-top: 3vh;
-    margin-bottom: 2vh;
+/*.one, .two, .three{*/
+/*    margin-top: 3vh;*/
+/*    margin-bottom: 2vh;*/
+/*}*/
+
+.card{
+    width: 15vw;
 }
