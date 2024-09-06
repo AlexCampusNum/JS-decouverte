@@ -234,8 +234,6 @@ console.log("Ajout de typeTraduit : ", jsonDatas);
 // Gestion de l'affichage des articles selon les filtres et les tris
 
 let articlesList = document.getElementById("articles-list");
-let button = document.getElementById("btn");
-let check = document.getElementById("stock");
 let nameItem = document.getElementById("nameItem");
 let price = document.getElementById("prix");
 
@@ -472,29 +470,28 @@ function displayDropDown(datas) {
 // Appeler la fonction avec vos données JSON
 displayDropDown(jsonDatas);
 
+let button = document.getElementById("button");
+let check = document.getElementById("check");
 
+button.addEventListener("click", function() {
+    let isChecked = check.checked;
+    let select = document.getElementById("dropDownCategory").value.toLowerCase();
 
-// button.addEventListener("click", function() {
-//     let isChecked = check.checked;
-//     let input = document.getElementById("type").value.toLowerCase();
-//
-//     let filteredItems = [];
-//
-//     jsonDatas.forEach(category => {
-//         // Parcourir chaque item de la catégorie
-//         category.items.forEach(item => {
-//             // Appliquer les conditions de filtrage
-//             if (category.type.toLowerCase() === input && (!isChecked || item.quantity > 0)) {
-//                 filteredItems.push({
-//                     name: item.name,
-//                     type: category.typeTraduit || category.type,
-//                     description: item.description,
-//                     price: item.price,
-//                     quantity: item.quantity
-//                 });
-//             }
-//         });
-//     });
-//
-//     displayArticles(filteredItems);
-// });
+    let filteredItems = [];
+
+    jsonDatas.forEach(category => {
+        category.items.forEach(item => {
+            if (category.typeTraduit.toLowerCase() === select && (!isChecked || item.quantity > 0)) {
+                filteredItems.push({
+                    name: item.name,
+                    type: category.typeTraduit || category.type,
+                    description: item.description,
+                    price: item.price,
+                    quantity: item.quantity
+                });
+            }
+        });
+    });
+
+    displayArticles(filteredItems);
+});
